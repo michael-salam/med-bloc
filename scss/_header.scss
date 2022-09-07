@@ -1,0 +1,86 @@
+.header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .header-content {
+        text-align: center;
+        width: 70%;
+
+        .logo {
+            height: 16rem;
+            animation: appear-and-rotate 1s ease-in-out forwards;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .heading {
+            color: #333;
+            text-align: center;
+
+            .main-heading {
+                font-weight: 900;
+                // font-size: 3rem;
+                font-size: clamp(2rem, 1.4074rem + 2.963vw, 4rem);
+                margin-top: 2rem;
+                margin-bottom: 0.75rem;
+
+                #share {
+                    opacity: 0;
+                    animation: fade-in 0.5s 1.25s ease-in-out forwards;
+                }
+
+                #learn {
+                    opacity: 0;
+                    animation: fade-in 0.5s 2s ease-in-out forwards;
+                }
+
+                #connect {
+                    opacity: 0;
+                    animation: fade-in 0.5s 2.75s ease-in-out forwards;
+                }
+            }
+
+            .sub-heading {
+                width: 80%;
+                margin: auto;
+                line-height: 1.5;
+                font-size: clamp(1.125rem, 0.9398rem + 0.9259vw, 1.75rem);
+                font-weight: 300;
+                opacity: 0;
+                transform: translateY(-1rem);
+                animation: slide-down 0.5s 3.5s ease-in-out forwards;
+            }
+        }
+
+        .scroll-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5rem;
+            opacity: 0;
+            transform: translateY(1.5rem);
+            animation: slide-down 0.5s 4s ease-in-out forwards infinite alternate;
+
+            .arrow-up {
+                height: 1.5rem;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            p {
+                color: #999;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+
+
+
+}

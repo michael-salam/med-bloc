@@ -1,0 +1,22 @@
+{
+  "name": "med-bloc",
+  "version": "1.0.0",
+  "description": "Medbloc social network for the medical community",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "sass ./scss/main.scss  ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-salam/med-bloc.git"
+  },
+  "author": "michael-salam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michael-salam/med-bloc/issues"
+  },
+  "homepage": "https://github.com/michael-salam/med-bloc#readme",
+  "dependencies": {
+    "sass": "^1.54.8"
+  }
+}

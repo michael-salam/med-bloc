@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes appear-and-rotate {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  80% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header-content {
+  text-align: center;
+  width: 70%;
+}
+.header .header-content .logo {
+  height: 16rem;
+  animation: appear-and-rotate 1s ease-in-out forwards;
+}
+.header .header-content .logo img {
+  height: 100%;
+}
+.header .header-content .heading {
+  color: #333;
+  text-align: center;
+}
+.header .header-content .heading .main-heading {
+  font-weight: 900;
+  font-size: clamp(2rem, 1.4074rem + 2.963vw, 4rem);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.header .header-content .heading .main-heading #share {
+  opacity: 0;
+  animation: fade-in 0.5s 1.25s ease-in-out forwards;
+}
+.header .header-content .heading .main-heading #learn {
+  opacity: 0;
+  animation: fade-in 0.5s 2s ease-in-out forwards;
+}
+.header .header-content .heading .main-heading #connect {
+  opacity: 0;
+  animation: fade-in 0.5s 2.75s ease-in-out forwards;
+}
+.header .header-content .heading .sub-heading {
+  width: 80%;
+  margin: auto;
+  line-height: 1.5;
+  font-size: clamp(1.125rem, 0.9398rem + 0.9259vw, 1.75rem);
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(-1rem);
+  animation: slide-down 0.5s 3.5s ease-in-out forwards;
+}
+.header .header-content .scroll-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  animation: slide-down 0.5s 4s ease-in-out forwards infinite alternate;
+}
+.header .header-content .scroll-indicator .arrow-up {
+  height: 1.5rem;
+}
+.header .header-content .scroll-indicator .arrow-up img {
+  height: 100%;
+}
+.header .header-content .scroll-indicator p {
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
