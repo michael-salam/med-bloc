@@ -7,6 +7,7 @@
 body {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  animation: slide-up 1s 4s ease-in-out;
 }
 
 a {
@@ -37,6 +38,14 @@ a {
     transform: translateY(0);
   }
 }
+@keyframes slide-up {
+  50% {
+    transform: translateY(-4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .header {
   padding: 2rem 0;
   display: flex;
@@ -45,7 +54,7 @@ a {
 }
 .header .header-content {
   text-align: center;
-  width: 70%;
+  padding: 0 1rem;
 }
 .header .header-content .logo {
   height: 16rem;
@@ -60,7 +69,7 @@ a {
 }
 .header .header-content .heading .main-heading {
   font-weight: 900;
-  font-size: clamp(2rem, 1.4074rem + 2.963vw, 4rem);
+  font-size: clamp(2.25rem, 1.5833rem + 3.3333vw, 4.5rem);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
@@ -80,7 +89,7 @@ a {
   width: 80%;
   margin: auto;
   line-height: 1.5;
-  font-size: clamp(1.125rem, 0.9398rem + 0.9259vw, 1.75rem);
+  font-size: clamp(1.25rem, 1.0278rem + 1.1111vw, 2rem);
   font-weight: 300;
   opacity: 0;
   transform: translateY(-1rem);
@@ -104,6 +113,11 @@ a {
 .header .header-content .scroll-indicator p {
   color: #999;
   margin-left: 0.5rem;
+}
+
+.sect1 {
+  height: 30rem;
+  background-color: green;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@
 body {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    animation: slide-up 1s 4s ease-in-out;
 }
 
 a {
@@ -40,6 +41,16 @@ a {
 @keyframes slide-down {
     100% {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    50% {
+        transform: translateY(-4rem);
+    }
+
+    100% {
         transform: translateY(0);
     }
 }

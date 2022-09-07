@@ -6,7 +6,8 @@
 
     .header-content {
         text-align: center;
-        width: 70%;
+        padding: 0 1rem;
+        // width: 70%;
 
         .logo {
             height: 16rem;
@@ -24,7 +25,7 @@
             .main-heading {
                 font-weight: 900;
                 // font-size: 3rem;
-                font-size: clamp(2rem, 1.4074rem + 2.963vw, 4rem);
+                font-size: clamp(2.25rem, 1.5833rem + 3.3333vw, 4.5rem);
                 margin-top: 2rem;
                 margin-bottom: 0.75rem;
 
@@ -48,7 +49,7 @@
                 width: 80%;
                 margin: auto;
                 line-height: 1.5;
-                font-size: clamp(1.125rem, 0.9398rem + 0.9259vw, 1.75rem);
+                font-size: clamp(1.25rem, 1.0278rem + 1.1111vw, 2rem);
                 font-weight: 300;
                 opacity: 0;
                 transform: translateY(-1rem);
@@ -79,8 +80,9 @@
             }
         }
     }
+}
 
-
-
-
+.sect1 {
+    height: 30rem;
+    background-color: green;
 }
