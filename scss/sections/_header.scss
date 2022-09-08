@@ -8,14 +8,18 @@
     .header-content {
         text-align: center;
         padding: 0 1rem;
-        // width: 70%;
 
         .logo {
-            height: 16rem;
+            height: 10rem;
             animation: appear-and-rotate 1s ease-in-out forwards;
 
             img {
                 height: 100%;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
             }
         }
 
@@ -29,6 +33,16 @@
                 font-size: clamp(2.25rem, 1.5833rem + 3.3333vw, 4.5rem);
                 margin-top: 2rem;
                 margin-bottom: 0.75rem;
+
+                #share,
+                #learn,
+                #connect {
+                    transition: all 0.5s;
+
+                    &:hover {
+                        color: #8fde6e;
+                    }
+                }
 
                 #share {
                     opacity: 0;
@@ -52,6 +66,7 @@
                 line-height: 1.5;
                 font-size: clamp(1.25rem, 1.0278rem + 1.1111vw, 2rem);
                 font-weight: 300;
+                color: #666;
                 opacity: 0;
                 transform: translateY(-1rem);
                 animation: slide-down 0.5s 3.5s ease-in-out forwards;
@@ -81,9 +96,4 @@
             }
         }
     }
-}
-
-.sect1 {
-    height: 30rem;
-    background-color: green;
 }

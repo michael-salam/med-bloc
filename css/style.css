@@ -27,10 +27,11 @@ a {
   }
   80% {
     opacity: 1;
-    scale: 1;
+    scale: 1.2;
   }
   100% {
     transform: rotate(360deg);
+    scale: 1;
   }
 }
 @keyframes fade-in {
@@ -52,6 +53,94 @@ a {
     transform: translateY(0);
   }
 }
+@keyframes hide-ctas {
+  0% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  99% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10rem);
+    display: none;
+  }
+}
+@keyframes show-ctas {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+.cta-btns {
+  background-color: rgba(51, 51, 51, 0.8666666667);
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: fit-content;
+  z-index: 100;
+  box-shadow: 0px 2px 5px -4px rgba(51, 51, 51, 0.4);
+}
+@media (max-width: 47.9375em) {
+  .cta-btns {
+    padding: 0.75rem;
+  }
+}
+.cta-btns.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10rem);
+}
+.cta-btns.invisible {
+  animation: hide-ctas 0.5s ease-in-out forwards;
+}
+.cta-btns.visible {
+  animation: show-ctas 0.5s ease-in-out forwards;
+}
+.cta-btns button {
+  padding: 1rem 2rem;
+  border-radius: 0.875rem;
+  font-weight: 600;
+  border: none;
+  background-color: #8fde6e;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media (max-width: 47.9375em) {
+  .cta-btns button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+    font-weight: 400;
+  }
+}
+.cta-btns button.login {
+  margin-right: 1rem;
+  background-color: #fff;
+  color: #8fde6e;
+}
+.cta-btns button:hover {
+  transform: translateY(-1px);
+}
+.cta-btns button:active {
+  transform: translateY(1px);
+}
+
 .header {
   padding: 3rem 0;
   display: flex;
@@ -64,11 +153,15 @@ a {
   padding: 0 1rem;
 }
 .header .header-content .logo {
-  height: 16rem;
+  height: 10rem;
   animation: appear-and-rotate 1s ease-in-out forwards;
 }
 .header .header-content .logo img {
   height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.header .header-content .logo img:hover {
+  transform: scale(1.15);
 }
 .header .header-content .heading {
   color: #222;
@@ -79,6 +172,16 @@ a {
   font-size: clamp(2.25rem, 1.5833rem + 3.3333vw, 4.5rem);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+}
+.header .header-content .heading .main-heading #share,
+.header .header-content .heading .main-heading #learn,
+.header .header-content .heading .main-heading #connect {
+  transition: all 0.5s;
+}
+.header .header-content .heading .main-heading #share:hover,
+.header .header-content .heading .main-heading #learn:hover,
+.header .header-content .heading .main-heading #connect:hover {
+  color: #8fde6e;
 }
 .header .header-content .heading .main-heading #share {
   opacity: 0;
@@ -98,6 +201,7 @@ a {
   line-height: 1.5;
   font-size: clamp(1.25rem, 1.0278rem + 1.1111vw, 2rem);
   font-weight: 300;
+  color: #666;
   opacity: 0;
   transform: translateY(-1rem);
   animation: slide-down 0.5s 3.5s ease-in-out forwards;
@@ -122,11 +226,6 @@ a {
   margin-left: 0.5rem;
 }
 
-.sect1 {
-  height: 30rem;
-  background-color: green;
-}
-
 .benefits {
   width: 90%;
   margin: 5rem auto;
@@ -146,6 +245,10 @@ a {
   background-color: rgba(143, 222, 110, 0.0666666667);
   border-radius: 1rem;
   box-shadow: 0px 2px 5px -4px rgba(51, 51, 51, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.benefits .card:hover {
+  transform: scale(0.97);
 }
 .benefits .card h3 {
   margin-bottom: 1rem;
@@ -154,6 +257,95 @@ a {
   margin-bottom: 0.75rem;
   color: #666;
   line-height: 2;
+}
+
+.get-started {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #333;
+  color: #fff;
+}
+.get-started .heading {
+  width: 70%;
+  margin: auto;
+}
+@media (max-width: 26.5em) {
+  .get-started .heading {
+    width: 100%;
+  }
+}
+.get-started .btn {
+  padding: 1.5rem 2.5rem;
+  background-color: #8fde6e;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.get-started .btn:hover {
+  color: #8fde6e;
+  background-color: #fff;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+.medcounty {
+  text-align: center;
+  margin: 5rem 1rem;
+}
+.medcounty .heading a {
+  color: #8fde6e;
+  position: relative;
+  transition: all 0.5s;
+}
+.medcounty .heading a span {
+  color: #555;
+}
+.medcounty .heading a::after {
+  position: absolute;
+  content: "";
+  height: 0.175rem;
+  width: 20%;
+  bottom: -0.5rem;
+  left: 0;
+  border-radius: 1rem;
+  background-color: #555;
+  transition: all 0.5s;
+}
+.medcounty .heading a:hover::after {
+  background-color: #8fde6e;
+  width: 100%;
+}
+.medcounty .sub-heading {
+  color: #888;
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.medcounty .med-county-logo {
+  display: block;
+  width: 20rem;
+  margin: auto;
+}
+.medcounty .med-county-logo img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #8fde6e;
+  margin-top: 2rem;
+  transition: all 0.2s;
+}
+.medcounty .med-county-logo img:hover {
+  border-color: #333;
+  transform: scale(0.95);
+}
+@media (max-width: 26.5em) {
+  .medcounty .med-county-logo {
+    width: 90vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

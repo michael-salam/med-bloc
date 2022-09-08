@@ -1,0 +1,65 @@
+.medcounty {
+    text-align: center;
+    margin: 5rem 1rem;
+
+    .heading {
+
+        a {
+            color: #8fde6e;
+            position: relative;
+            transition: all 0.5s;
+
+            span {
+                color: #555;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 0.175rem;
+                width: 20%;
+                bottom: -0.5rem;
+                left: 0;
+                border-radius: 1rem;
+                background-color: #555;
+                transition: all 0.5s;
+            }
+
+            &:hover::after {
+                background-color: #8fde6e;
+                width: 100%;
+            }
+        }
+
+    }
+
+    .sub-heading {
+        color: #888;
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .med-county-logo {
+        display: block;
+        width: 20rem;
+        margin: auto;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid #8fde6e;
+            margin-top: 2rem;
+            transition: all 0.2s;
+
+            &:hover {
+                border-color: #333;
+                transform: scale(0.95);
+            }
+        }
+
+        @include breakpoint-down(mobile-md) {
+            width: 90vw;
+        }
+    }
+}

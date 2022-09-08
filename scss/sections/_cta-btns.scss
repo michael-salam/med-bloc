@@ -1,0 +1,62 @@
+.cta-btns {
+    background-color: #333333dd;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: fit-content;
+    z-index: 100;
+    box-shadow: 0px 2px 5px -4px #33333366;
+
+    @include breakpoint-down(tablet) {
+        padding: 0.75rem;
+    }
+
+    &.hidden {
+        display: none;
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    &.invisible {
+        animation: hide-ctas 0.5s ease-in-out forwards;
+    }
+
+    &.visible {
+        animation: show-ctas 0.5s ease-in-out forwards;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 0.875rem;
+        font-weight: 600;
+        border: none;
+        background-color: #8fde6e;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        @include breakpoint-down(tablet) {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+            border-radius: 0.75rem;
+            font-weight: 400;
+        }
+
+        &.login {
+            margin-right: 1rem;
+            background-color: #fff;
+            color: #8fde6e;
+        }
+
+        &:hover {
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+}

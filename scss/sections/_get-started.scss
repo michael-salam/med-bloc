@@ -1,0 +1,35 @@
+.get-started {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #333;
+    color: #fff;
+
+    .heading {
+        width: 70%;
+        margin: auto;
+
+        @include breakpoint-down(mobile-md) {
+            width: 100%;
+        }
+    }
+
+    .btn {
+        padding: 1.5rem 2.5rem;
+        background-color: #8fde6e;
+        color: #fff;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            color: #8fde6e;
+            background-color: #fff;
+            color: #333;
+            transform: translateY(-2px);
+        }
+    }
+}

@@ -30,11 +30,12 @@ a {
 
     80% {
         opacity: 1;
-        scale: 1;
+        scale: 1.2;
     }
 
     100% {
         transform: rotate(360deg);
+        scale: 1;
     }
 }
 
@@ -58,5 +59,41 @@ a {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes hide-ctas {
+    0% {
+        display: block;
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+
+    99% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10rem);
+        display: none;
+    }
+}
+
+@keyframes show-ctas {
+    0% {
+        display: none;
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    1% {
+        display: block;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
     }
 }

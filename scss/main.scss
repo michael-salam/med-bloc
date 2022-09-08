@@ -3,5 +3,8 @@
 @import "./utils/mixins";
 
 // page sections
-@import "./header";
-@import "./benefits";
+@import "./sections/cta-btns";
+@import "./sections/header";
+@import "./sections/benefits";
+@import "./sections/get-started";
+@import "./sections/medcounty";
