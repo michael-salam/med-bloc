@@ -1,8 +1,9 @@
 .header {
-    padding: 2rem 0;
+    padding: 3rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fdfdfd;
 
     .header-content {
         text-align: center;
@@ -19,7 +20,7 @@
         }
 
         .heading {
-            color: #333;
+            color: #222;
             text-align: center;
 
             .main-heading {
